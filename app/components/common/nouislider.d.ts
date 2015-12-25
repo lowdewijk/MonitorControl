@@ -138,7 +138,7 @@ declare module 'noUiSlider/distribute/nouislider' {
     }
 
 
-    interface noUiSlider {
+    export interface noUiSlider {
       /**
        * Bind event to the slider.
        */
@@ -167,7 +167,7 @@ declare module 'noUiSlider/distribute/nouislider' {
       set(value : number | number[]): void;
     }
 
-    interface Instance extends HTMLElement {
+    export interface Instance extends HTMLElement {
       noUiSlider: noUiSlider
     }
 }
