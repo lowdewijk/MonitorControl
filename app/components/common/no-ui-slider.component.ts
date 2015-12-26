@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ElementRef, Inject} from 'angular2/core';
+import {Component, Input, Output, OnInit, ElementRef, Inject, EventEmitter} from 'angular2/core';
 import {create as createSlider, Instance as SliderInstance, noUiSlider as NoUiSlider}  from 'noUiSlider/distribute/nouislider';
 
 export class Orientation {
@@ -12,8 +12,9 @@ export class Orientation {
 })
 export class NoUiSliderCmp implements OnInit {
 
-  @Input() orientation = Orientation.Horizontal;
-  @Input() size        = 100;
+  @Input()  orientation = Orientation.Horizontal;
+  @Input()  size        = 100;
+  @Output() change      = new EventEmitter<number>();
   elementStyle ='';
 
   private sliderElement : HTMLElement;
@@ -42,9 +43,7 @@ export class NoUiSliderCmp implements OnInit {
 
     this.slider = (<SliderInstance> this.sliderElement).noUiSlider;
 
-    this.slider.on('slide', newValue => {
-      console.log('new value', newValue);
-    });
+    this.slider.on('slide', newValue => this.change.emit(newValue[0]) );
   }
 
 }

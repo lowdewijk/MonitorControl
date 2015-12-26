@@ -1,4 +1,4 @@
-import {serveSPA} from '../utils';
+import {serveSPA} from '../../server/server';
 
 export = function serverStart(gulp, plugins) {
   return function () {
