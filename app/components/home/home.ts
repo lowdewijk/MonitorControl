@@ -6,7 +6,7 @@ import {fromWebSocket} from 'rx-dom/dist/rx.dom';
 @Component({
   selector: 'home',
   directives: [NoUiSliderCmp, GridComponent],
-  template: `<grid><no-ui-slider orientation="vertical" size="300" (change)="onSlideChange($event)"></no-ui-slider></grid>`,
+  template: `<sts-grid><no-ui-slider orientation="vertical" size="300" (change)="onSlideChange($event)"></no-ui-slider></sts-grid>`,
   styleUrls: ['./components/home/home.css']
 })
 export class HomeCmp {

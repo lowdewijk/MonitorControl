@@ -1,3 +1,14 @@
-grid {
-    background: red;
+@import '_variables.scss';
+.sts-grid {
+    @include make-container();
+}
+.sts-grid-row {
+    @include make-row();
+    border-bottom: solid 1px #000;
+}
+
+.sts-grid-col {
+    @include make-col-span(2);
+    border-right: solid 1px #000;
+
 }
