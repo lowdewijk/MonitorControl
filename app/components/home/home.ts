@@ -1,10 +1,16 @@
 import {Component} from 'angular2/core';
-import {NoUiSliderCmp}  from '../common/no-ui-slider.component';
+import {StackComponent} from './stackcomponent.component';
+import {Control} from './control.component';
 
 @Component({
   selector: 'home',
-  directives: [NoUiSliderCmp],
-  template: `<no-ui-slider orientation="vertical" size="300" (change)="onSlideChange($event)"></no-ui-slider>`,
+  directives: [StackComponent, Control],
+  template: `
+    <stack-component name="Server 1">
+      <control name="CPU Load %"></control>
+      <control name="Memory usage %"></control>
+    </stack-component>
+  `,
   styleUrls: ['./components/home/home.css']
 })
 export class HomeCmp {
