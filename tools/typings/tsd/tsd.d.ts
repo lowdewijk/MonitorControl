@@ -19,5 +19,8 @@
 /// <reference path="vinyl/vinyl.d.ts" />
 /// <reference path="websocket/websocket.d.ts" />
 /// <reference path="wnumb/wnumb.d.ts" />
+<<<<<<< HEAD
 /// <reference path="../../../node_modules/definition-header/dist/index.d.ts" />
+=======
+>>>>>>> 2cf13b1fa0e522d3631a73efd266a14dcac943b1
 /// <reference path="../../../node_modules/reflect-metadata/reflect-metadata.d.ts" />

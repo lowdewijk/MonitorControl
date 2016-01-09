@@ -3,10 +3,15 @@ import {GridComponentCmp} from '../grid/gridcomponent';
 
 @Component({
   selector: 'grid',
-  templateUrl: './components/grid/grid.html'
+  templateUrl: './components/grid/grid.html',
+  directives:[GridComponentCmp],
+  styleUrls: ['./assets/supergrid.css']
 })
 export class GridCmp {
   constructor() {}
-  var cmp1 = new GridCmp();  
-  
+
+  gridcomponents: GridComponentCmp[] = [    
+    
+  ];
+
 }

@@ -1,5 +1,9 @@
 import {Component} from 'angular2/core';
+<<<<<<< HEAD
 import {StsComponent} from '../home/sts-component.component'
+=======
+
+>>>>>>> 2cf13b1fa0e522d3631a73efd266a14dcac943b1
 @Component({
    selector: 'sts-grid',
    template: `
@@ -16,6 +20,7 @@ import {StsComponent} from '../home/sts-component.component'
 })
 
 export class GridComponent {
+<<<<<<< HEAD
     rows = [
         [5, 5, 5],
         [2],
@@ -32,4 +37,7 @@ export class GridComponent {
     }
 
 
+=======
+    constructor() {}
+>>>>>>> 2cf13b1fa0e522d3631a73efd266a14dcac943b1
 }
