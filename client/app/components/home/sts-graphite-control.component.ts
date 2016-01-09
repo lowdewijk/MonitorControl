@@ -21,9 +21,9 @@ export class StsGraphiteControl implements StsControl {
   onSlideChange($event) {
     this.dataPointPublisher.observer.next({
       provider: 'Graphite',
-      identifier: `${this.stackComponent.name}/${this.name}`,
+      identifier: `${this.stackComponent.name}.${this.name}`,
       data: {
-        value: $event
+        value: parseFloat($event)
       }
     });
     console.log(`Graphite control moved '${this.name}' for component '${this.stackComponent.name}' `, $event);

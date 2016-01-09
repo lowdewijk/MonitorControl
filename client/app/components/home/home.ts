@@ -8,17 +8,13 @@ import {GridComponent} from '../common/grid.component';
   selector: 'home',
   directives: [GridComponent, StsComponent, StsGraphiteControl, StsOpsviewControl],
   template: `
-  <sts-component name="Server 1">
-    <sts-graphite-control name="CPU Load %"></sts-graphite-control>
+  <sts-component name="server1">
+    <sts-graphite-control name="cpuLoadPercent"></sts-graphite-control>
     <sts-opsview-control name="Memory usage"></sts-opsview-control>
   </sts-component>
   <sts-grid>
-    <sts-component name="Server 1">
-      <sts-graphite-control name="CPU Load %"></sts-graphite-control>
-      <sts-opsview-control name="Memory usage"></sts-opsview-control>
-    </sts-component>
-    <sts-component name="Server 2">
-      <sts-graphite-control name="CPU Load %"></sts-graphite-control>
+    <sts-component name="server2">
+      <sts-graphite-control name="cpuLoadPercent"></sts-graphite-control>
       <sts-opsview-control name="Memory usage"></sts-opsview-control>
     </sts-component>
   </sts-grid>`,
