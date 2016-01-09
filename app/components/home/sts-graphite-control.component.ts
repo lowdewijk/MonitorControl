@@ -19,4 +19,8 @@ export class StsGraphiteControl implements StsControl {
   constructor(stackComponent: StsComponent) {
     this.stackComponent = stackComponent;
   }
+
+  onSlideChange($event) {
+    console.log(`Graphite control moved '${this.name}' for component '${this.stackComponent.name}' `, $event);
+  }
 }

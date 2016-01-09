@@ -24,8 +24,4 @@ export class HomeCmp {
 
   constructor() {
   }
-
-  onSlideChange($event) {
-    console.log('on change', $event);
-  }
 }
