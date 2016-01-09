@@ -1,17 +1,17 @@
 import {Component} from 'angular2/core';
-import {StackComponent} from './stackcomponent.component';
-import {Control} from './control.component';
+import {StsComponent} from './sts-component.component';
+import {StsControl} from './sts-control.component';
 import {GridComponent} from '../common/grid.component';
 
 @Component({
   selector: 'home',
-  directives: [GridComponent, StackComponent, Control],
+  directives: [GridComponent, StsComponent, StsControl],
   template: `
   <grid>
-    <stack-component name="Server 1">
-      <control name="CPU Load %"></control>
-      <control name="Memory usage %"></control>
-    </stack-component>
+    <sts-component name="Server 1">
+      <sts-control name="CPU Load %"></sts-control>
+      <sts-control name="Memory usage %"></sts-control>
+    </sts-component>
   </grid>`,
   styleUrls: ['./components/home/home.css']
 })

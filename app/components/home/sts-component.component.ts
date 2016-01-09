@@ -1,23 +1,23 @@
 import {Component, Input} from 'angular2/core';
-import {Control} from './control.component';
+import {StsControl} from './sts-control.component';
 
 @Component({
-  selector: 'stack-component',
+  selector: 'sts-component',
   template: `<div>
               <ng-content></ng-content>
             </div>`
 })
-export class StackComponent {
+export class StsComponent {
 
   @Input() name: String;
 
-  controls: Control[];
+  controls: StsControl[];
 
   constructor() {
     this.controls = [];
   }
 
-  addControl(control: Control) {
+  addControl(control: StsControl) {
     this.controls.push(control);
   }
 }
