@@ -10,9 +10,8 @@ import {GridComponentCmp} from '../grid/gridcomponent';
 export class GridCmp {
   constructor() {}
 
-  gridcomponents: GridComponentCmp[] = [];
+  gridcomponents: GridComponentCmp[] = [    
+    
+  ];
 
-  addGridComponentt(cmp:GridComponentCmp) {
-    this.gridcomponents.push(cmp);
-  }  
 }

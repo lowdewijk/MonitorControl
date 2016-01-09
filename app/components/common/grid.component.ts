@@ -1,4 +1,4 @@
-import {Component, Input, Output} from 'angular2/core';
+import {Component} from 'angular2/core';
 
 @Component({
    selector: 'grid',
@@ -7,6 +7,5 @@ import {Component, Input, Output} from 'angular2/core';
 })
 
 export class GridComponent {
-
     constructor() {}
 }
