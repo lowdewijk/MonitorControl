@@ -1,12 +1,23 @@
 import {Component} from 'angular2/core';
-import {NoUiSliderCmp}  from '../common/no-ui-slider.component';
+import {StsComponent} from './sts-component.component';
+import {StsGraphiteControl} from './sts-graphite-control.component';
+import {StsOpsviewControl} from './sts-opsview-control.component';
 import {GridComponent} from '../common/grid.component';
-import {fromWebSocket} from 'rx-dom/dist/rx.dom';
 
 @Component({
   selector: 'home',
-  directives: [NoUiSliderCmp, GridComponent],
-  template: `<sts-grid><no-ui-slider orientation="vertical" size="300" (change)="onSlideChange($event)"></no-ui-slider></sts-grid>`,
+  directives: [GridComponent, StsComponent, StsGraphiteControl, StsOpsviewControl],
+  template: `
+  <sts-grid>
+    <sts-component name="Server 1">
+      <sts-graphite-control name="CPU Load %"></sts-graphite-control>
+      <sts-opsview-control name="Memory usage"></sts-opsview-control>
+    </sts-component>
+    <sts-component name="Server 2">
+      <sts-graphite-control name="CPU Load %"></sts-graphite-control>
+      <sts-opsview-control name="Memory usage"></sts-opsview-control>
+    </sts-component>
+  </sts-grid>`,
   styleUrls: ['./components/home/home.css']
 })
 export class HomeCmp {
