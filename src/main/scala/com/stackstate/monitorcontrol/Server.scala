@@ -39,7 +39,9 @@ object Server extends App {
   }
 
   def controlFlow: Flow[Message, Message, Unit] = {
-    Flow[Message].map { _ =>  TextMessage("alain is a weirdo") }
+    Flow[Message].map { _ =>
+      TextMessage("""{ "nice" : " answer " }""")
+    }
   }
 
 }
