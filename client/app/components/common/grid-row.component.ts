@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {GridComponent} from '../common/grid.component'
+import {GridComponent} from '../common/grid.component';
 
 @Component({
    selector: 'sts-grid-row',

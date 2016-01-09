@@ -2,6 +2,7 @@ import {Component, Input} from 'angular2/core';
 import {StsComponent} from './sts-component.component';
 import {NoUiSliderCmp}  from '../common/no-ui-slider.component';
 import {StsControl} from './sts-control';
+import {DataPointPublisher} from '../common/DataPointPublisher';
 
 @Component({
   selector: 'sts-graphite-control',
@@ -14,13 +15,17 @@ import {StsControl} from './sts-control';
 export class StsGraphiteControl implements StsControl {
   @Input() name: String;
 
-  private stackComponent: StsComponent;
-
-  constructor(stackComponent: StsComponent) {
-    this.stackComponent = stackComponent;
+  constructor(private stackComponent: StsComponent, private dataPointPublisher: DataPointPublisher) {
   }
 
   onSlideChange($event) {
+    this.dataPointPublisher.observer.next({
+      provider: 'Graphite',
+      identifier: `${this.stackComponent.name}/${this.name}`,
+      data: {
+        value: $event
+      }
+    });
     console.log(`Graphite control moved '${this.name}' for component '${this.stackComponent.name}' `, $event);
   }
 }
