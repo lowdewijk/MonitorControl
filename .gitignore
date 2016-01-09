@@ -9,3 +9,8 @@ client/tools/typings/tsd
 #IDE configuration files
 .idea
 .vscode
+
+#SBT
+target
+project/target
+project/project
