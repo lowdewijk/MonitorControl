@@ -1,6 +1,5 @@
 import {Component} from 'angular2/core';
 import {NoUiSliderCmp}  from '../common/no-ui-slider.component';
-import {fromWebSocket} from 'rx-dom/dist/rx.dom';
 
 @Component({
   selector: 'home',
