@@ -1,5 +1,5 @@
 import {Component, Input, Output, OnInit, ElementRef, Inject, EventEmitter} from 'angular2/core';
-import {create as createSlider, Instance as SliderInstance, noUiSlider as NoUiSlider}  from 'noUiSlider/distribute/nouislider';
+import {create as createSlider, Instance as SliderInstance, noUiSlider as NoUiSlider}  from 'nouislider/distribute/nouislider';
 
 export class Orientation {
   static Horizontal = 'horizontal';
