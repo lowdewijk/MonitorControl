@@ -7,6 +7,8 @@ import {
 
 import {HomeCmp} from '../home/home';
 import {AboutCmp} from '../about/about';
+import {GridComponentCmp} from '../grid/gridcomponent';
+import {GridCmp} from '../grid/grid';
 
 @Component({
   selector: 'app',
@@ -17,6 +19,8 @@ import {AboutCmp} from '../about/about';
 })
 @RouteConfig([
   { path: '/', component: HomeCmp, as: 'Home' },
-  { path: '/about', component: AboutCmp, as: 'About' }
+  { path: '/about', component: AboutCmp, as: 'About' },
+  { path: '/gridcomponent', component: GridComponentCmp, as: 'Gridcomponent' },
+  { path: '/grid', component: GridCmp, as: 'Grid' }
 ])
 export class AppCmp {}
