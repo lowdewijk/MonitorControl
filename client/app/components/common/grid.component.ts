@@ -1,17 +1,17 @@
 import {Component} from 'angular2/core';
-<<<<<<< HEAD
-import {StsComponent} from '../home/sts-component.component'
-=======
+import {CmpDto} from '../grid/cmpDto'
+import {StsComponent} from '../home/sts-component.component';
 
->>>>>>> 2cf13b1fa0e522d3631a73efd266a14dcac943b1
 @Component({
+   directives: [StsComponent],
    selector: 'sts-grid',
    template: `
     <div class="sts-grid">
-        {{component}}
         <sts-grid-row *ngFor="#r of rows" class="sts-grid-row">
             <sts-grid-col *ngFor="#c of r">
-               {{c}}
+               <sts-component ng-if="c != null" x="c.x" y="c.y" [name]="c.name">
+               blaaa
+               </sts-component>
             </sts-grid-col>
         </sts-grid-row>
     </div>
@@ -20,24 +20,17 @@ import {StsComponent} from '../home/sts-component.component'
 })
 
 export class GridComponent {
-<<<<<<< HEAD
-    rows = [
-        [5, 5, 5],
-        [2],
-        [1, 2]
-    ];
-    component : StsComponent;
+    rows : Array<Array<CmpDto>> = [
+               [new CmpDto('Server01',1,1)]
+           ];
 
     constructor() {
-           this.component = new StsComponent();
+        //    this.rows =[
+        //        [new CmpDto('Server01',1,1)]
+        //    ];
     }
 
-    addToGrid(component : StsComponent) {
+    addToGrid(component : CmpDto) {
 
-    }
-
-
-=======
-    constructor() {}
->>>>>>> 2cf13b1fa0e522d3631a73efd266a14dcac943b1
-}
+    };
+};
