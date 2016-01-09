@@ -16,3 +16,4 @@ project/target
 project/project
 
 dist/dev/**
+client/app/assets/grid.css
