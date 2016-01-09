@@ -2,7 +2,7 @@ import {Component, Input} from 'angular2/core';
 
 @Component({
   selector: 'sts-component',
-  template: `<div>
+  template: `<div class="component">
               <ng-content></ng-content>
             </div>`
 })
